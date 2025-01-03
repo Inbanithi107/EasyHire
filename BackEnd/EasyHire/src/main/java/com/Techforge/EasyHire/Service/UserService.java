@@ -1,5 +1,7 @@
 package com.Techforge.EasyHire.Service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +23,18 @@ public class UserService implements UserMethods{
 	}
 
 	@Override
-	public User currentuser() {
-		
+	public User currentuser(long id) {
+		Optional<User> user = repository.findById(id);
+		return user.get();
+	}
+
+	@Override
+	public User login(String username, String password) {
+		Optional<User> optuser = repository.findByUsernameAndPassword(username, password); 
+		if(optuser.isEmpty()) {
 		return null;
+		}
+		return optuser.get();
 	}
 	
 	

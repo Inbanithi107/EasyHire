@@ -6,6 +6,8 @@ public interface UserMethods {
 	
 	void createuser(User user);
 	
-	User currentuser();
+	User currentuser(long id);
+	
+	User login(String username, String password);
 
 }
