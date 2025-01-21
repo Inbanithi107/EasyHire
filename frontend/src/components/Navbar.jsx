@@ -20,7 +20,7 @@ const Navbar = () => {
             <ul className="hidden md:flex absolute top-6 right-6 cursor-pointer ">
                 
                 <li className="p-4 "onClick={()=>Navigate("/Login")}>Login</li>
-                <li className="p-4"onClick={()=>Navigate("/")}>Signup</li>
+                <li className="p-4"onClick={()=>Navigate("/Signup")}>Signup</li>
                 <li className="p-4"onClick={()=>Navigate("/")}>Jobs</li>
                 <li className="p-4"onClick={()=>Navigate("/")}>Contact</li>
             </ul>
@@ -33,7 +33,7 @@ const Navbar = () => {
 
                 <ul className="uppercase p-4 cursor-pointer ">
                 <li className="p-4 border-b border-gray-600"onClick={()=>Navigate("/Login")}>Login</li>
-                <li className="p-4 border-b border-gray-600"onClick={()=>Navigate("/")}>Signup</li>
+                <li className="p-4 border-b border-gray-600"onClick={()=>Navigate("/Signup")}>Signup</li>
                 <li className="p-4 border-b border-gray-600"onClick={()=>Navigate("/")}>Jobs</li>
                 <li className="p-4 "onClick={()=>Navigate("/")}>Contact</li>
                 </ul>
